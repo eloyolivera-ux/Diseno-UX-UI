@@ -1,0 +1,68 @@
+:root {
+    --color-primario: #003b70;
+    --color-secundario: #005ca8;
+    --color-fondo: #f2f2f2;
+    --color-formulario: white;
+    --color-texto: black;
+    --espaciado: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primario: #4da3ff;
+        --color-secundario: #0066aa;
+        --color-fondo: #222;
+        --color-formulario: #333;
+        --color-texto: white;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    padding: var(--espaciado);
+}
+
+form {
+    width: 400px;
+    margin: auto;
+    padding: var(--espaciado);
+    background-color: var(--color-formulario);
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: var(--espaciado);
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-primario);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+}
+
+button {
+    margin-top: var(--espaciado);
+    padding: 10px 25px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+}

@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.pagina {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    grid-template-rows: 90px 1fr 70px;
+
+    grid-template-areas:
+        "header header"
+        "sidebar contenido"
+        "footer footer";
+
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #003b70;
+    color: white;
+    padding: 20px;
+}
+
+header img {
+    width: 170px;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: white;
+    padding: 20px;
+}
+
+aside a {
+    display: block;
+    margin-bottom: 15px;
+    color: #003b70;
+    text-decoration: none;
+}
+
+main {
+    grid-area: contenido;
+    background-color: white;
+    padding: 30px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #003b70;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
