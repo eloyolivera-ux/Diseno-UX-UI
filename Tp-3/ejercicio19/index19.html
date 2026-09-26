@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="style19.css">
+</head>
+
+<body>
+
+    <div class="formulario">
+
+        <h1>Registro</h1>
+
+        <input type="radio" name="paso" id="paso1" checked>
+        <input type="radio" name="paso" id="paso2">
+
+        <section class="paso paso-1">
+
+            <h2>Paso 1: Datos personales</h2>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="18" required>
+
+            <label for="ir-paso2" class="boton">
+                Siguiente
+            </label>
+
+        </section>
+
+        <section class="paso paso-2">
+
+            <h2>Paso 2: Datos de cuenta</h2>
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" id="usuario" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" minlength="6" required>
+
+            <label for="confirmar">Confirmar contraseña:</label>
+            <input type="password" id="confirmar" minlength="6" required>
+
+            <div class="botones">
+
+                <label for="ir-paso1" class="boton">
+                    Anterior
+                </label>
+
+                <button type="submit">Registrarse</button>
+
+            </div>
+
+        </section>
+
+        <!-- RADIO BUTTONS OCULTOS -->
+        <label for="paso2" id="ir-paso2"></label>
+        <label for="paso1" id="ir-paso1"></label>
+
+    </div>
+
+</body>
+
+</html>
