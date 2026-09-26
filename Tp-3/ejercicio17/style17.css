@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #003b70;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: white;
+}
+
+
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+
+.menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: white;
+    padding: 10px 15px;
+}
+
+
+.menu ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    margin: 0;
+    padding: 20px;
+
+    list-style: none;
+    box-sizing: border-box;
+
+    background-color: white;
+
+    transform: translateX(100%);
+
+    transition: transform 0.5s ease;
+}
+
+
+.cerrar {
+    text-align: right;
+    padding: 10px;
+}
+
+.cerrar label {
+    font-size: 30px;
+    cursor: pointer;
+    color: #003b70;
+}
+
+
+.menu li {
+    padding: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #003b70;
+    font-size: 20px;
+}
+
+
+#menu-toggle:checked ~ ul {
+    transform: translateX(0);
+}
+
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.card {
+    flex-basis: 250px;
+    flex-grow: 1;
+    border: 2px solid black;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: yellow;
+
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+.card h2 {
+    font-size: 20px;
+}
+
+
+.card p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

@@ -7,14 +7,14 @@ body {
 .pagina {
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: 220px 1fr;
 
     grid-template-rows: 90px 1fr 70px;
 
     grid-template-areas:
-        "header"
-        "contenido"
-        "footer";
+        "header header"
+        "sidebar contenido"
+        "footer footer";
 
     min-height: 100vh;
 }
@@ -31,7 +31,6 @@ header img {
 }
 
 aside {
-    display: none;
     grid-area: sidebar;
     background-color: white;
     padding: 20px;
@@ -59,30 +58,34 @@ footer {
 }
 
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
 
     .pagina {
         grid-template-columns: 180px 1fr;
-
-        grid-template-areas:
-            "header header"
-            "sidebar contenido"
-            "footer footer";
     }
 
-    aside {
-        display: block;
+    main {
+        padding: 25px;
     }
 }
 
 
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
 
     .pagina {
-        grid-template-columns: 220px 1fr;
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "header"
+            "contenido"
+            "footer";
+    }
+
+    aside {
+        display: none;
     }
 
     main {
-        padding: 40px;
+        padding: 20px;
     }
 }
